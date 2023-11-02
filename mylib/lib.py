@@ -20,10 +20,10 @@ LOG_FILE = "pyspark_output.md"
 def log_output(operation, output, query=None):
     """adds to a markdown file"""
     with open(LOG_FILE, "a") as file:
-        file.write(f"The operation is {operation}\n")
+        file.write(f"The operation is {operation}\n\n")
         if query: 
-            file.write(f"The query is {query}\n")
-        file.write("The truncated output is: \n")
+            file.write(f"The query is {query}\n\n")
+        file.write("The truncated output is: \n\n")
         file.write(output)
         file.write("\n\n")
 
