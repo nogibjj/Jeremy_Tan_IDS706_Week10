@@ -2,10 +2,19 @@
 Main cli or app entry point
 """
 
-from mylib.lib import extract, load_data, describe, query, example_transform, start_spark, end_spark
+from mylib.lib import (
+    extract,
+    load_data,
+    describe,
+    query,
+    example_transform,
+    start_spark,
+    end_spark,
+)
+
 
 def main():
-    # extract data 
+    # extract data
     extract()
     # start spark session
     spark = start_spark("DailyShowGuests")
@@ -13,8 +22,13 @@ def main():
     df = load_data(spark)
     # example metrics
     describe(df)
-    # query 
-    query(spark, df, "SELECT YEAR, COUNT(*) AS guest_count FROM guests GROUP BY YEAR ORDER BY YEAR", "guests") 
+    # query
+    query(
+        spark,
+        df,
+        "SELECT YEAR, COUNT(*) AS guest_count FROM guests GROUP BY YEAR ORDER BY YEAR",
+        "guests",
+    )
     # example transform
     example_transform(df)
     # end spark session
