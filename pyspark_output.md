@@ -270,3 +270,75 @@ The truncated output is:
 |  8 |   1999 | actor                       |        | Acting   | Matthew Lillard  | Acting                |
 |  9 |   1999 | stand-up comedian           |        | Comedy   | David Cross      | Other                 |
 
+The operation is load data
+
+The truncated output is: 
+
+|    |   YEAR | GoogleKnowlege_Occupation   | Show   | Group    | Raw_Guest_List   |
+|---:|-------:|:----------------------------|:-------|:---------|:-----------------|
+|  0 |   1999 | actor                       |        | Acting   | Michael J. Fox   |
+|  1 |   1999 | Comedian                    |        | Comedy   | Sandra Bernhard  |
+|  2 |   1999 | television actress          |        | Acting   | Tracey Ullman    |
+|  3 |   1999 | film actress                |        | Acting   | Gillian Anderson |
+|  4 |   1999 | actor                       |        | Acting   | David Alan Grier |
+|  5 |   1999 | actor                       |        | Acting   | William Baldwin  |
+|  6 |   1999 | Singer-lyricist             |        | Musician | Michael Stipe    |
+|  7 |   1999 | model                       |        | Media    | Carmen Electra   |
+|  8 |   1999 | actor                       |        | Acting   | Matthew Lillard  |
+|  9 |   1999 | stand-up comedian           |        | Comedy   | David Cross      |
+
+The operation is describe data
+
+The truncated output is: 
+
+|    | summary   |       YEAR | GoogleKnowlege_Occupation   | Group    | Raw_Guest_List                |
+|---:|:----------|-----------:|:----------------------------|:---------|:------------------------------|
+|  0 | count     | 2693       | 2693                        | 2693     | 2693                          |
+|  1 | mean      | 2006.82    | 0.0                         |          |                               |
+|  2 | stddev    |    4.82818 | 0.0                         |          |                               |
+|  3 | min       | 1999       | -                           | Academic | "Dwayne The Rock"" Johnson""" |
+|  4 | max       | 2015       | writer                      | media    | none                          |
+
+The operation is query data
+
+The query is SELECT YEAR, COUNT(*) AS guest_count FROM guests GROUP BY YEAR ORDER BY YEAR
+
+The truncated output is: 
+
+|    |   YEAR |   guest_count |
+|---:|-------:|--------------:|
+|  0 |   1999 |           166 |
+|  1 |   2000 |           169 |
+|  2 |   2001 |           157 |
+|  3 |   2002 |           159 |
+|  4 |   2003 |           166 |
+|  5 |   2004 |           164 |
+|  6 |   2005 |           162 |
+|  7 |   2006 |           161 |
+|  8 |   2007 |           141 |
+|  9 |   2008 |           164 |
+| 10 |   2009 |           163 |
+| 11 |   2010 |           165 |
+| 12 |   2011 |           163 |
+| 13 |   2012 |           164 |
+| 14 |   2013 |           166 |
+| 15 |   2014 |           163 |
+| 16 |   2015 |           100 |
+
+The operation is transform data
+
+The truncated output is: 
+
+|    |   YEAR | GoogleKnowlege_Occupation   | Show   | Group    | Raw_Guest_List   | Occupation_Category   |
+|---:|-------:|:----------------------------|:-------|:---------|:-----------------|:----------------------|
+|  0 |   1999 | actor                       |        | Acting   | Michael J. Fox   | Acting                |
+|  1 |   1999 | Comedian                    |        | Comedy   | Sandra Bernhard  | Other                 |
+|  2 |   1999 | television actress          |        | Acting   | Tracey Ullman    | Other                 |
+|  3 |   1999 | film actress                |        | Acting   | Gillian Anderson | Other                 |
+|  4 |   1999 | actor                       |        | Acting   | David Alan Grier | Acting                |
+|  5 |   1999 | actor                       |        | Acting   | William Baldwin  | Acting                |
+|  6 |   1999 | Singer-lyricist             |        | Musician | Michael Stipe    | Other                 |
+|  7 |   1999 | model                       |        | Media    | Carmen Electra   | Other                 |
+|  8 |   1999 | actor                       |        | Acting   | Matthew Lillard  | Acting                |
+|  9 |   1999 | stand-up comedian           |        | Comedy   | David Cross      | Other                 |
+
